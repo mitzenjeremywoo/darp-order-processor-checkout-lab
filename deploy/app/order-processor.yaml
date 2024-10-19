@@ -11,8 +11,6 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 5000
-  #type: LoadBalancer
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -39,8 +37,8 @@ spec:
       - name: order-processor
         image: order-processor-image
         env:
-        - name: APP_PORT
-          value: "5000"
+        - name: ASPNETCORE_URLS
+          value: "http://localhost:5000"
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
