@@ -1,0 +1,46 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: orderprocessor
+  labels:
+    app: orderprocessor
+spec:
+  selector:
+    app: orderprocessor
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+  #type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderprocessor
+  labels:
+    app: orderprocessor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-processor
+  template:
+    metadata:
+      labels:
+        app: order-processor
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "order-processor"
+        dapr.io/app-port: "5000"
+        dapr.io/enable-api-logging: "true"
+    spec:
+      containers:
+      - name: order-processor
+        image: order-processor-image
+        env:
+        - name: APP_PORT
+          value: "5000"
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: Always

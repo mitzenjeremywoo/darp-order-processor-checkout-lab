@@ -1,0 +1,31 @@
+== APP - order-processor == Building...
+== APP - order-processor == info: Microsoft.Hosting.Lifetime[14]
+== APP - order-processor ==       Now listening on: http://localhost:7001
+== APP - order-processor == info: Microsoft.Hosting.Lifetime[0]
+== APP - order-processor ==       Application started. Press Ctrl+C to shut down.
+== APP - order-processor == info: Microsoft.Hosting.Lifetime[0]
+== APP - order-processor ==       Hosting environment: Development
+== APP - order-processor == info: Microsoft.Hosting.Lifetime[0]
+== APP - order-processor ==       Content root path: C:\Work\dapr\quickstarts\service_invocation\csharp\http\order-processor
+== APP - order-processor == Order received : Order { orderId = 1 }
+== APP - order-processor == Order received : Order { orderId = 2 }
+== APP - order-processor == Order received : Order { orderId = 3 }
+== APP - order-processor == Order received : Order { orderId = 4 }
+== APP - order-processor == Order received : Order { orderId = 5 }
+== APP - order-processor == Order received : Order { orderId = 6 }
+== APP - order-processor == Order received : Order { orderId = 7 }
+== APP - order-processor == Order received : Order { orderId = 8 }
+== APP - order-processor == Order received : Order { orderId = 9 }
+== APP - order-processor == Order received : Order { orderId = 10 }
+== APP - order-processor == Order received : Order { orderId = 11 }
+== APP - order-processor == Order received : Order { orderId = 12 }
+== APP - order-processor == Order received : Order { orderId = 13 }
+== APP - order-processor == Order received : Order { orderId = 14 }
+== APP - order-processor == Order received : Order { orderId = 15 }
+== APP - order-processor == Order received : Order { orderId = 16 }
+== APP - order-processor == Order received : Order { orderId = 17 }
+== APP - order-processor == Order received : Order { orderId = 18 }
+== APP - order-processor == Order received : Order { orderId = 19 }
+== APP - order-processor == Order received : Order { orderId = 20 }
+
+termination signal received: shutting down

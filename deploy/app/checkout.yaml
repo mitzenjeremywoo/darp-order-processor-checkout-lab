@@ -1,0 +1,46 @@
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: checkout
+#   labels:
+#     app: checkout
+# spec:
+#   selector:
+#     app: checkout
+#   ports:
+#   - protocol: TCP
+#     port: 80
+#     targetPort: 3000
+  #type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkout
+  labels:
+    app: checkout
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checkout
+  template:
+    metadata:
+      labels:
+        app: checkout
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "checkout"
+        dapr.io/app-port: "5000"
+        dapr.io/enable-api-logging: "true"
+    spec:
+      containers:
+      - name: checkout
+        image: checkout-image
+        env:
+        - name: APP_PORT
+          value: "5000"
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: Always

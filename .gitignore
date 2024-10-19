@@ -1,0 +1,7 @@
+.vs/
+dapr_client_service_invocation/obj/
+src/checkout/bin/
+src/checkout/obj/
+src/order-processor/obj/
+src/order-processor/bin/
+src/checkout/.dapr/
