@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: order-processor
-        image: order-processor-image
+        image: kepung/order-processor:1.0.0
         env:
         - name: ASPNETCORE_URLS
           value: "http://localhost:5000"

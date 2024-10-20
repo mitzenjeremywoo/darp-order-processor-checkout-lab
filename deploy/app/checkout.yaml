@@ -28,15 +28,15 @@ spec:
     metadata:
       labels:
         app: checkout
-      annotations:
-        dapr.io/enabled: "true"
-        dapr.io/app-id: "checkout"
-        dapr.io/app-port: "5000"
-        dapr.io/enable-api-logging: "true"
+      # annotations:
+      #   dapr.io/enabled: "true"
+      #   dapr.io/app-id: "checkout"
+      #   dapr.io/app-port: "5000"
+      #   dapr.io/enable-api-logging: "true"
     spec:
       containers:
       - name: checkout
-        image: checkout-image
+        image: kepung/checkout:1.0.0
         env:
         - name: APP_PORT
           value: "5000"
