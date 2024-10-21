@@ -3,7 +3,7 @@ Clone the repository then go into the src folder.
 
 Run the following command to build your image. 
 
-*cd order-processor*
+>cd order-processor
 
 *docker buildx build . -t  docker-account/order-processor:1.0.0*
 
