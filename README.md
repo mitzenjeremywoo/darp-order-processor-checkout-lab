@@ -9,9 +9,10 @@ Run the following command to build your image.
 
 >docker push
 
-*cd checkout*
-*docker buildx build . -t  docker-account/checkout:1.0.0*
-*docker push*
+>cd checkout
+
+>docker buildx build . -t  docker-account/checkout:1.0.0
+>docker push*
 
 
 To deploy to your kubernetes cluster, run the following command
